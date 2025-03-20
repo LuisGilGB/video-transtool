@@ -1,9 +1,10 @@
 'use client';
 
 import dynamic from "next/dynamic";
+import MainFallback from "./MainFallback";
 
 const Main = dynamic(() => import("./Main"), {
-  loading: () => <main className="relative min-h-screen flex flex-col justify-center items-center">Loading...</main>,
+  loading: () => <MainFallback />,
   ssr: false
 });
 

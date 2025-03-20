@@ -2,6 +2,12 @@
 
 Video Transtool is a utility app to transcode and transcribe video files using FFmpeg and OpenAI's API.
 
+Live demo: [Video Transtool](https://video-transtool.vercel.app/)
+
+**DISCLAIMER:** Due to Vercel Functions limit, in the live version only videos smaller than 5MB can be processed.
+
+In case you are interested to use this utility to process larger files, you can run it locally or deploy it to your own server. You must use your own OpenAI API key in this case.
+
 ## Getting Started
 
 Install dependencies:
@@ -35,6 +41,8 @@ With FFmpeg, we can transcode the video to a format that is supported by Whisper
 FFmpeg is integrated to this app thanks to the `@ffmpeg/ffmpeg` package, which implements FFmpeg's functionality in a WebAssembly module.
 
 The transcription is handled by OpenAI's API, which is used through the `@ai-sdk/openai` package with the Whisper model.
+
+For now, presets for the transcoding are hardcoded. Adding UI elements to customize these parameters would be a good next step.
 
 ## Usage
 
